@@ -94,17 +94,61 @@ footer {
   font-size: 0.9rem;
 }
 
-.noMostrar {
-  display: none;
-}
-
-img {
-  height: 10%;
-  width: 10%;
-  border-radius: 30px;
-}
-
 #productos {
   text-align: center;
   background-color: wheat;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+#productos img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Catalogo */
+#catalogo img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 10px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* 📱 Responsivo para móviles */
+@media (max-width: 768px) {
+  #hero {
+    padding: 60px 10px;
+  }
+
+  .hero-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  #productos img {
+    height: 180px;
+  }
+
+  #catalogo img {
+    max-width: 90%;
+  }
+
+  #opciones button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+.noMostrar {
+  display: none !important;
 }
